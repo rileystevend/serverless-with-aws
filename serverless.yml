@@ -22,11 +22,14 @@ functions:
     handler: src/api/todos.handler
     events:
       - http: 
+          path: /todo
+          method: GET
+          
+  todo:
+    handler: src/api/todo.handler
+    events:
+      - http: 
           path: /todo/{id}
           method: GET
           parameters: 
             id: true
-          
-  todo:
-    handler: src/api/todo.handler
-    
