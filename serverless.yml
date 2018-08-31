@@ -14,10 +14,19 @@ functions:
   api:
     handler: src/api/api.handler
     events:
-      - http: GET /api
+      - http: 
+          path: /api
+          method: GET
+          cors: true
   todos:
     handler: src/api/todos.handler
-    
+    events:
+      - http: 
+          path: /todo/{id}
+          method: GET
+          parameters: 
+            id: true
+          
   todo:
     handler: src/api/todo.handler
     
