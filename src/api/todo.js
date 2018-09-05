@@ -1,5 +1,5 @@
 module.exports.handler = (event, ctx, done) => {
-console.log(JSON.stringify(event, null, 2))
+console.log(JSON.stringify(ctx, null, 2))
 
   done(null, {
     statusCode: 200,
